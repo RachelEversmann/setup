@@ -1,11 +1,6 @@
 set nocompatible              " be iMproved, required
+
 filetype off                  " required
-call plug#begin('~/.vim/plugged')
-Plug 'prettier/vim-prettier', {
-    \ 'do': 'npm install'}
-Plug 'tpope/vim-pathogen'
-Plug 'kana/vim-smartinput'
-call plug#end()
 " set the runtime path to include Vundle and initialize
 set rtp^=~/.vim/bundle/ctrlp.vim
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -25,7 +20,7 @@ if filereadable(expand("~/.vimrc.bundles"))
 endif
 
 call vundle#end()
-filetype plugin indent on    " required
+filetype plugin on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -53,10 +48,7 @@ set hlsearch
 noremap j gj
 noremap k gk
 let g:jsx_ext_required = 0
-execute pathogen#infect()
-call pathogen#helptags()
 map <C-n> :NERDTreeToggle<CR>
-autocmd vimenter * NERDTree
 map <C-b> :OpenBookmark 
 let NERDTreeQuitOnOpen = 3
 " Trigger a highlight in the appropriate direction when pressing these keys:
@@ -84,8 +76,6 @@ let g:esearch = {
   \ 'default_mappings': 1,
   \}
 hi ESearchMatch ctermfg=black ctermbg=darkblue  guifg=#000000 guibg=#E6E6FA
-call esearch#out#win#map('<C-j>', 'next-file')
-call esearch#out#win#map('<C-k>', 'prev-file')
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:syntastic_html_checkers=['']
@@ -96,4 +86,3 @@ if (has("termguicolors"))
   set termguicolors
 endif
 set background=dark
-colorscheme spacemacs-theme

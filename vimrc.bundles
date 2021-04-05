@@ -18,7 +18,6 @@ Plugin 'tpope/vim-sleuth'
 Plugin 'unblevable/quick-scope'
 Plugin 'eugen0329/vim-esearch'
 Plugin 'simnalamburt/vim-mundo'
-
 " External tool integration
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
@@ -34,9 +33,6 @@ Plugin 'joukevandermaas/vim-ember-hbs'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'colepeters/spacemacs-theme.vim'
-
-" Linting
-Plugin 'vim-syntastic/syntastic'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
